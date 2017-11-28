@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+   function Ninja(name){
+      this.name = name;
+      this.health = 100;
+      this.speed = 3;
+      this.strength = 3;
+      return this;
+   };Ninja.prototype.sayName = function(){
+            console.log("My ninja name is" + this.name);
+        }
+        Ninja.prototype.showStats = function(){
+            console.log("Name:" + this.name + "Health:" + this.health + 
+            "Speed:" + this.speed + "Strength:" + this.strength);
+        }
+        Ninja.prototype.drinkSake = function(){
+           this.health += 10;
+           return this;
+        }
+        Ninja.prototype.punch = function(){
+            this.health -= 5;
+            console.log("Goemon was punched by Bill Gates and lost 5 Health!");
+            return this;
+        }
+        Ninja.prototype.kick = function(ninja2){
+            this.health -= 15;
+            console.log("Bill Gates was kicked by Goemon and lost 15 Health!");
+            return this;
+        }
+
+        const  ninja1 = new Ninja("Hyabusa");
+        ninja1.sayName();
+        ninja1.showStats();
+        
+        
+        const blueNinja = new Ninja("Goemon");
+        ninja1.punch();
+
+        const redNinja = new Ninja("Bill Gates");
+        redNinja.punch(blueNinja);
+
+            </script>
+    </head>
+    
+    
+    
+    
+    
+    <body>
+mean assignments
+    </body>
+</html>
